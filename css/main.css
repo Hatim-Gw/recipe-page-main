@@ -1,0 +1,143 @@
+/* global variables */
+:root {
+  --White: hsl(0, 0%, 100%);
+
+  --Stone100: hsl(30, 54%, 90%);
+  --Stone150: hsl(30, 18%, 87%);
+  --Stone600: hsl(30, 10%, 34%);
+  --Stone900: hsl(24, 5%, 18%);
+
+  --Brown800: hsl(14, 45%, 36%);
+
+  --Rose800: hsl(332, 51%, 32%);
+  --Rose50: hsl(330, 100%, 98%);
+}
+
+/* global rules */
+
+body {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: var(--Stone100);
+  min-height: 200vh;
+  color: var(--Stone600);
+  line-height: 1.7;
+}
+
+.box {
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Young Serif", serif;
+}
+h3 {
+  color: var(--Brown800);
+}
+p {
+}
+
+ol li::marker {
+  color: var(--Rose800);
+  font-weight: bold;
+  margin-right: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  background-color: var(--White);
+  width: 700px;
+  border-radius: 6px;
+  margin: auto;
+  padding: 0 35px;
+}
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: auto;
+  }
+}
+.box .img-box {
+  width: fit-content;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+.box .img-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.abstract h1 {
+  color: var(--Stone900);
+  margin-bottom: 30px;
+}
+
+.abstract .preparation {
+  background-color: var(--Rose50);
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+.abstract .preparation p {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  color: var(--Rose800);
+  font-weight: bold;
+}
+.abstract .preparation {
+}
+
+.ingredients {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--Stone150);
+}
+.instructions {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--Stone150);
+}
+.instructions ol li {
+  margin-bottom: 5px;
+}
+.instructions span {
+  font-weight: bold;
+}
+.nutrition {
+  padding-bottom: 30px;
+}
+.nutrition table,
+.nutrition table tbody {
+  display: block;
+  width: 100%;
+}
+
+.nutrition table tr {
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.nutrition table tr:not(:last-child) {
+  width: 100%;
+  border-bottom: 1px solid var(--Stone150);
+}
+.nutrition table td {
+  flex-basis: 50%;
+}
